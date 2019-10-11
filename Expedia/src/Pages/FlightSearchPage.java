@@ -35,7 +35,7 @@ public class FlightSearchPage {
     }
 
     public static WebElement ClickSearch(WebDriver driver){
-        element = driver.findElement(By.id("gcw-flights-form-flp"));
+        element = driver.findElement(By.xpath("/html/body/meso-native-marquee/section/div/div/div[1]/section/div/div[2]/div[2]/section[1]/form/div[8]/label/button"));
         return element;
     }
 }
