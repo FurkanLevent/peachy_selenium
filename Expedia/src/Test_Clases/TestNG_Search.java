@@ -30,30 +30,30 @@ public class TestNG_Search {
 
 
     @Test
-    public void TestSearchTestCase(){
+    public void TestFlyTestCase(){
         driver.get(baseURL);
-        FlightSearchPage.ClickFlightTab(driver).click();
-        FlightSearchPage.FlyingFrom(driver).sendKeys("SFO");
-        FlightSearchPage.FlyingTo(driver).sendKeys("FLL");
+        FlightSearchPage.FlightTabClick(driver).click();
+        FlightSearchPage.FlyingFrom(driver).sendKeys("Istanbul");
+        FlightSearchPage.FlyingTo(driver).sendKeys("Ankara");
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-        FlightSearchPage.DeptDate(driver).sendKeys("12/08/2019");
+        FlightSearchPage.FlyDeptDate(driver).sendKeys("12/08/2019");
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-        FlightSearchPage.ReturnDate(driver).sendKeys("08/30/2020");
+        FlightSearchPage.FlyReturnDate(driver).sendKeys("08/30/2020");
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-        FlightSearchPage.ClickSearch(driver).click();
+        FlightSearchPage.FlyClickSearch(driver).click();
 
     }
 
     	@Test
         public void TestHotelSearch(){
 		driver.get(baseURL);
-            HotelSearchPage.ClickHotelTab(driver).click();
-            HotelSearchPage.getGoingTo(driver).sendKeys("FLL");
+            HotelSearchPage.HotelTabcClick(driver).click();
+            HotelSearchPage.getGoingTo(driver).sendKeys("Ankara");
             HotelSearchPage.getCheckIn(driver).sendKeys("12/08/2019");
             driver.manage().timeouts().implicitlyWait(2,TimeUnit.SECONDS);
             HotelSearchPage.getCheckOut(driver).sendKeys("08/30/2020");
             driver.manage().timeouts().implicitlyWait(3,TimeUnit.SECONDS);
-            HotelSearchPage.Searchbutton(driver).click();
+            HotelSearchPage.HotelSearchbutton(driver).click();
             driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 
         }
