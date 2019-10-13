@@ -39,13 +39,15 @@ public class TestNG_Search {
         FlightSearchPage.FlyDeptDate(driver).sendKeys("12/08/2019");
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         FlightSearchPage.FlyReturnDate(driver).sendKeys("08/30/2020");
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        FlightSearchPage.FlyTravelers(driver).click();
+        FlightSearchPage.FlyTravelersAdult(driver).click();
+        FlightSearchPage.FlyTravelersChildren(driver).click();
         FlightSearchPage.FlyClickSearch(driver).click();
 
     }
 
     	@Test
-        public void TestHotelSearch(){
+        public void TestHotelCase(){
 		driver.get(baseURL);
             HotelSearchPage.HotelTabcClick(driver).click();
             HotelSearchPage.getGoingTo(driver).sendKeys("Ankara");
@@ -53,8 +55,10 @@ public class TestNG_Search {
             driver.manage().timeouts().implicitlyWait(2,TimeUnit.SECONDS);
             HotelSearchPage.getCheckOut(driver).sendKeys("08/30/2020");
             driver.manage().timeouts().implicitlyWait(3,TimeUnit.SECONDS);
+            HotelSearchPage.HotelTravelers(driver).click();
+            driver.manage().timeouts().implicitlyWait(3,TimeUnit.SECONDS);
+            HotelSearchPage.HotelTravelersAdult(driver).click();
             HotelSearchPage.HotelSearchbutton(driver).click();
-            driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 
         }
 
